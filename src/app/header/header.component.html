@@ -1,8 +1,8 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <!-- <a class="navbar-brand" href="index.html" [ngClass]="{'hightlight': titleStyle}">conduit</a> -->
+    <a class="navbar-brand" href="index.html" [ngClass]="{'highlight': titleStyle}">conduit</a>
     <!-- <a class="navbar-brand" href="index.html" [ngStyle]="{'color': titleStyle ? 'red' : '#5CB85C'}">conduit</a> -->
-    <a class="navbar-brand" href="index.html" [class.highlight]="titleStyle" [style.font-size.px]="fontSize">conduit</a>
+    <!-- <a class="navbar-brand" href="index.html" [class.highlight]="titleStyle" [style.font-size.px]="fontSize">conduit</a> -->
     <!-- <a class="navbar-brand" href="index.html" [style.font-size.px]="fontSize">conduit</a> -->
     <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="searchText" (keyup.enter)="goSearch()">
     <button class="btn btn-sm btn-primary" (click)="goSearch()">

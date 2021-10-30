@@ -61,6 +61,8 @@ export class AppComponent {
     }
   ]
 
+  searchlist:any[] = [];
+
   list2 = [
     {
       title: 'Test',
@@ -74,4 +76,23 @@ export class AppComponent {
 
   title = 'conduitxxxx';
   subtitle = 'A place to share your <u>knowledge</u>.';
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.searchlist = this.list;
+  }
+
+  doSearch(event: any){
+    console.log(event);
+    if(event){
+      this.searchlist = this.list.filter(f => f.title.indexOf(event) > -1);
+      console.log(this.searchlist);
+
+    } else {
+      this.searchlist = this.list;
+    }
+    // console.log(this.list);
+
+  }
 }

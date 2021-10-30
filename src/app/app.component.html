@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (keyword)="doSearch($event)"></app-header>
 
 <div class="home-page">
   <div class="banner">
@@ -11,7 +11,8 @@
     <div class="row">
       <div class="col-md-9">
 
-        <app-articles [list] = list></app-articles>
+        <app-articles [list] = searchlist></app-articles>
+        <h3 *ngIf="this.searchlist.length === 0" style="text-align: center;">查無資料</h3>
 
       </div>
       <div class="col-md-3">
