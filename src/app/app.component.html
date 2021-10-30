@@ -12,8 +12,8 @@
     <div class="row">
       <div class="col-md-9">
 
-        <app-articles [list] = searchlist></app-articles>
-        <h3 *ngIf="this.searchlist.length === 0" style="text-align: center;">查無資料</h3>
+        <app-articles [list] = list></app-articles>
+        <h3 *ngIf="this.list.length === 0" style="text-align: center;">查無資料</h3>
 
       </div>
       <div class="col-md-3">
