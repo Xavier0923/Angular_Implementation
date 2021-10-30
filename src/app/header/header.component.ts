@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   searchText:string = '';
+  titleStyle: boolean = false;
+  fontSize:number = 12;
 
   constructor() { }
 
@@ -15,7 +17,9 @@ export class HeaderComponent implements OnInit {
   }
 
   goSearch(){
-    alert("您搜尋了 : " + this.searchText);
+    console.log('haha');
+    this.titleStyle = !this.titleStyle;
+    this.fontSize += 2;
   }
 
   keyEnter(){
