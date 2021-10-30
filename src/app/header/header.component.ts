@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   searchText:string = '';
   titleStyle: boolean = false;
   fontSize:number = 12;
+  searchError: boolean = false;
 
   constructor() { }
 
@@ -19,7 +20,8 @@ export class HeaderComponent implements OnInit {
   goSearch(){
     console.log('haha');
     this.titleStyle = !this.titleStyle;
-    this.fontSize += 2;
+    // this.fontSize += 2;
+    !this.searchText ? this.searchError = true : this.searchError = false;
   }
 
   keyEnter(){
