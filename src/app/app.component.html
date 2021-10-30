@@ -1,10 +1,11 @@
-<app-header (keyword)="doSearch($event)"></app-header>
+<app-header (keywordChange)="doSearch($event)" [(keyword)]="keyword"></app-header>
 
 <div class="home-page">
   <div class="banner">
     <div class="container">
       <h1 class="logo-font" [title]="title">{{title}}</h1>
       <p [innerHTML]="subtitle"></p>
+      <p>{{ keyword }}</p>
     </div>
   </div>
   <div class="container page">

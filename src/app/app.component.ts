@@ -76,6 +76,7 @@ export class AppComponent {
 
   title = 'conduitxxxx';
   subtitle = 'A place to share your <u>knowledge</u>.';
+  keyword = 'test';
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.

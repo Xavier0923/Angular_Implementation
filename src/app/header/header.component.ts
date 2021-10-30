@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,8 +11,8 @@ export class HeaderComponent implements OnInit {
   titleStyle: boolean = false;
   fontSize:number = 12;
   searchError: boolean = false;
-
-  @Output() keyword = new EventEmitter<string>();
+  @Input() keyword = '';
+  @Output() keywordChange = new EventEmitter<string>();
 
   constructor() { }
 
@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     this.titleStyle = !this.titleStyle;
     // this.fontSize += 2;
     !this.searchText ? this.searchError = true : this.searchError = false;
-    this.keyword.emit(this.searchText);
+    this.keywordChange.emit(this.searchText);
   }
 
   keyEnter(){
