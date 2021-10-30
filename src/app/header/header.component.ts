@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  searchText:string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goSearch(){
+    alert("您搜尋了 : " + this.searchText);
+  }
+
+  keyEnter(){
+    this.goSearch()
   }
 
 }
